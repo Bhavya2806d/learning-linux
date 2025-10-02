@@ -1,0 +1,28 @@
+User Management in Linux
+Linux is a multi-user operating system, meaning multiple users can operate on a system simultaneously. Proper user management ensures security, controlled access, and system integrity.
+
+  Key files involved in user management:
+/etc/passwd – Stores user account details.
+/etc/shadow – Stores encrypted user passwords.
+/etc/group – Stores group information.
+/etc/gshadow – Stores secure group details.
+
+  useradd username
+  useradd -m username-with home directory
+  add username
+  passwd username
+  chage -M 90 username-password expiration
+  passwd -l username-lock
+  passwd -u username-unlock
+  usermod -l newusername oldusername
+  usermod -d /path/to/new/homedir -m username
+  userdel username
+  userdel -r username
+  groupadd groupname
+  usermod -aG groupname username
+  groups username
+  usermod -g newprimarygroup username
+  usermod -aG sudo username
+  
+  
+  
